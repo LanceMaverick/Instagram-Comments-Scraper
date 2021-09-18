@@ -2,8 +2,7 @@ import pandas as pd
 from pandas import ExcelWriter
 import os.path
 
-def export(names, comments):
-    fname = 'comments.xlsx'
+def export(fname, names, comments):
     temp = {}
     temp_names = []
     temp_comments = []
