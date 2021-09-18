@@ -5,9 +5,9 @@ import sys
 urls = []
 
 driver = webdriver.Chrome()
-for url in urls:
+for j, url in enumerate(urls):
     
-    driver.get(sys.argv[1])
+    driver.get(id)
     time.sleep(3)
 
     #if user not logined
@@ -46,6 +46,7 @@ for url in urls:
     user_names.pop(0)
     user_comments.pop(0)
     import excel_exporter
+    fname = "comments_{}.xlsx",format(j)
     excel_exporter.export(user_names, user_comments)
 
 driver.close()
